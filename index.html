@@ -1,34 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-  Published 21 Dec 2023
+      html {
+        font-family: 'Figtree', sans-serif;
+        font-size: 62.5%;
+      }
 
-  HTML & CSS foundations
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+        height: 100vh;
+        background-color: #f4d04e;
+      }
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .blog-card {
+        width: 300px;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 1.2rem;
+        border: 1px solid #121212;
+        box-shadow: 0.8rem 0.8rem #121212;
+      }
+
+      @media (min-width: 768px) {
+        .blog-card {
+          width: 384px;
+        }
+      }
+
+      .blog-card__img {
+        width: 100%;
+        border-radius: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .blog-card__category {
+        display: inline-block;
+        background-color: #f4d04e;
+        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+
+      .blog-card__date-published {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-bottom: 1.6rem;
+      }
+
+      .blog-card__headline {
+        margin-bottom: 1.2rem;
+      }
+
+      .blog-card__headline:hover {
+        cursor: pointer;
+        color: #f4d04e;
+      }
+
+      .blog-card__description {
+        font-size: 1.3rem;
+        color: #6b6b6b;
+        line-height: 1.5;
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+      }
+
+      .blog-card__author-info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .blog-card__author-img {
+        width: 3.2rem;
+      }
+
+      .blog-card__author-name {
+        color: #121212;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog-card">
+      <img
+        class="blog-card__img"
+        src="./assets/images/illustration-article.svg"
+        alt="illustration" />
+      <h2 class="blog-card__category">Learning</h2>
+      <p class="blog-card__date-published">Published 21 Dec 2023</p>
+      <h1 class="blog-card__headline">HTML & CSS foundations</h1>
+      <p class="blog-card__description"
+        >These languages are the backbone of every website, defining structure, content and
+        presentation</p
+      >
+      <div class="blog-card__author-info">
+        <img
+          class="blog-card__author-img"
+          src="./assets/images/image-avatar.webp"
+          alt="Image of Greg Hooper" />
+        <h2 class="blog-card__author-name">Greg Hooper</h2>
+      </div>
+    </div>
+  </body>
 </html>
